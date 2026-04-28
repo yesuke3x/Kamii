@@ -6,26 +6,26 @@ import narxoz from "@/assets/goals-narxoz.jpg";
 import { useParallax, useReveal, useCountUp } from "@/hooks/use-reveal";
 
 const skills = [
-  { name: "Микро- и макроэкономика", level: 88 },
-  { name: "Excel · продвинутый уровень", level: 92 },
-  { name: "SQL · работа с данными", level: 78 },
-  { name: "Финансовый анализ", level: 85 },
-  { name: "Английский язык (business)", level: 95 },
-  { name: "Презентации и публичные выступления", level: 90 },
+  { name: "Micro & Macroeconomics", level: 88 },
+  { name: "Excel · advanced level", level: 92 },
+  { name: "SQL · data work", level: 78 },
+  { name: "Financial Analysis", level: 85 },
+  { name: "Business English", level: 95 },
+  { name: "Presentations & Public Speaking", level: 90 },
 ];
 
 const timeline = [
-  { year: "2026", icon: GraduationCap, title: "Окончить 1 курс с отличием", text: "Микро- и макроэкономика, статистика, бухгалтерский учёт — фундамент будущей карьеры в финансах." },
-  { year: "2026", icon: BarChart3, title: "Освоить продвинутый Excel и SQL", text: "Сводные таблицы, Power Query, базовые SELECT/JOIN — собрать рабочий аналитический стек." },
-  { year: "2027", icon: Briefcase, title: "Первая стажировка в финансах", text: "Стажировка младшим аналитиком в банке, аудиторской компании или финтех-стартапе Алматы." },
-  { year: "2027", icon: Rocket, title: "Сертификация и кейсы", text: "Пройти CFA Level I prep, собрать портфолио из 2–3 финансовых проектов и кейсов." },
-  { year: "2028+", icon: TrendingUp, title: "Big4 или Fintech", text: "Войти в одну из компаний «Большой четвёрки» (Deloitte, PwC, EY, KPMG) или сильный финтех-проект." },
+  { year: "2026", icon: GraduationCap, title: "Finish Year 1 with honours", text: "Micro & macroeconomics, statistics, accounting — the foundation of a future career in finance." },
+  { year: "2026", icon: BarChart3, title: "Master advanced Excel & SQL", text: "Pivot tables, Power Query, basic SELECT/JOIN — build a solid analytics stack." },
+  { year: "2027", icon: Briefcase, title: "First finance internship", text: "Junior analyst internship at a bank, audit firm, or fintech startup in Almaty." },
+  { year: "2027", icon: Rocket, title: "Certification & case studies", text: "Complete CFA Level I prep and build a portfolio of 2–3 financial projects and case studies." },
+  { year: "2028+", icon: TrendingUp, title: "Big 4 or Fintech", text: "Join one of the Big Four (Deloitte, PwC, EY, KPMG) or a high-growth fintech project." },
 ];
 
 const focus = [
-  { title: "Корпоративные финансы", text: "Финансовое моделирование, оценка компаний, работа с отчётностью — классический путь аналитика." },
-  { title: "Аудит · Big4", text: "Deloitte, PwC, EY, KPMG. Школа дисциплины, стандартов и масштабного мышления для будущего CFO." },
-  { title: "Fintech", text: "Финансы + технологии. Продукты, которые делают деньги понятнее и доступнее для людей." },
+  { title: "Corporate Finance", text: "Financial modelling, company valuation, working with reports — the classic analyst's path." },
+  { title: "Audit · Big 4", text: "Deloitte, PwC, EY, KPMG. A school of discipline, standards, and big-picture thinking for a future CFO." },
+  { title: "Fintech", text: "Finance + technology. Products that make money simpler and more accessible for everyone." },
 ];
 
 const SkillRow = ({ name, level }: { name: string; level: number }) => {
@@ -65,15 +65,15 @@ const Goals = () => {
           <div className="flex items-center gap-4 mb-8 text-paper/85">
             <span className="font-serif italic text-sm">No. 03</span>
             <div className="h-px flex-1 bg-paper/30" />
-            <span className="text-[10px] uppercase tracking-[0.25em]">Профессиональный вектор</span>
+            <span className="text-[10px] uppercase tracking-[0.25em]">Professional Vector</span>
           </div>
 
           <h1 className="font-serif font-light text-6xl md:text-8xl lg:text-9xl leading-[0.95] max-w-5xl text-balance animate-slide-up">
-            Мой <em className="text-ochre">roadmap</em>.
+            My <em className="text-ochre">roadmap</em>.
           </h1>
           <Reveal delay={1}>
             <p className="mt-8 max-w-2xl font-serif italic text-xl text-paper/90 leading-relaxed">
-              Не пророчество — рабочий план будущего финансового аналитика, написанный карандашом и готовый к правкам.
+              Not a prophecy — a working plan for a future financial analyst, written in pencil and open to revision.
             </p>
           </Reveal>
 
@@ -81,7 +81,7 @@ const Goals = () => {
             <div className="mt-12 inline-flex items-center gap-3 border border-ochre/40 bg-ochre/10 backdrop-blur px-5 py-3">
               <span className="relative w-2 h-2 rounded-full bg-ochre text-ochre animate-pulse-ring" />
               <span className="text-xs uppercase tracking-[0.25em] text-ochre">
-                Сейчас: 1 курс · Университет Нархоз · Алматы
+                Now: Year 1 · Narxoz University · Almaty
               </span>
             </div>
           </Reveal>
@@ -92,14 +92,14 @@ const Goals = () => {
       <section className="container py-24 md:py-32">
         <div className="grid md:grid-cols-12 gap-10 mb-16">
           <Reveal className="md:col-span-4">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">Сфера</p>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">Focus</p>
             <h2 className="font-serif text-4xl md:text-5xl font-light leading-[1.05] text-balance">
-              Куда я <em className="text-terracotta">смотрю</em>.
+              Where I'm <em className="text-terracotta">looking</em>.
             </h2>
           </Reveal>
           <Reveal className="md:col-span-7 md:col-start-6 self-end" delay={1}>
             <p className="font-serif text-xl italic text-muted-foreground">
-              Финансы, корпоративная аналитика и аудит — три направления, которые сегодня формируют мой профессиональный вектор.
+              Finance, corporate analytics and audit — three directions shaping my professional vector today.
             </p>
           </Reveal>
         </div>
@@ -124,7 +124,7 @@ const Goals = () => {
             <div className="img-zoom">
               <img
                 src={narxoz}
-                alt="Камила у входа в Университет Нархоз — школа экономики и аналитики"
+                alt="Kamila at the entrance of Narxoz University — School of Economics and Analytics"
                 className="w-full aspect-[16/7] md:aspect-[21/8] object-cover"
                 loading="lazy"
               />
@@ -136,13 +136,13 @@ const Goals = () => {
             <figcaption className="absolute bottom-0 left-0 right-0">
               <div className="container py-8 md:py-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4 text-paper">
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-ochre mb-2">Где я учусь</p>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-ochre mb-2">Where I study</p>
                   <p className="font-serif text-2xl md:text-4xl font-light leading-tight max-w-xl">
-                    Университет <em className="text-ochre">Нархоз</em> · Школа экономики и аналитики
+                    <em className="text-ochre">Narxoz</em> University · School of Economics &amp; Analytics
                   </p>
                 </div>
                 <p className="font-serif italic text-paper/85 text-sm md:text-base max-w-xs">
-                  Алматы · 1 курс · Class of 2029.
+                  Almaty · Year 1 · Class of 2029.
                 </p>
               </div>
             </figcaption>
@@ -154,12 +154,12 @@ const Goals = () => {
       <section className="bg-paper-warm border-y border-ink/10">
         <div className="container py-24 md:py-32 grid md:grid-cols-12 gap-10">
           <Reveal className="md:col-span-4">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">Навыки</p>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">Skills</p>
             <h2 className="font-serif text-4xl md:text-5xl font-light leading-[1.05] mb-6 text-balance">
-              Цели на <em className="text-terracotta">обучение</em>.
+              Learning <em className="text-terracotta">goals</em>.
             </h2>
             <p className="font-serif italic text-muted-foreground">
-              Без завышенных оценок. Где я сейчас — и куда расту в ближайший год.
+              No inflated scores. Where I am now — and where I'm growing in the next year.
             </p>
           </Reveal>
 
@@ -174,9 +174,9 @@ const Goals = () => {
       {/* TIMELINE */}
       <section className="container py-24 md:py-32">
         <Reveal className="mb-16">
-          <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">План на год и дальше</p>
+          <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">Plan for the year and beyond</p>
           <h2 className="font-serif text-5xl md:text-7xl font-light leading-[0.95] max-w-4xl text-balance">
-            Шаги, которые я <em className="text-terracotta">пройду</em>.
+            Steps I will <em className="text-terracotta">take</em>.
           </h2>
         </Reveal>
 
@@ -213,9 +213,9 @@ const Goals = () => {
           <Reveal>
             <Target size={36} className="mx-auto text-ochre mb-8 animate-float" strokeWidth={1.5} />
             <blockquote className="font-serif italic text-3xl md:text-5xl font-light leading-[1.2] max-w-4xl mx-auto text-balance">
-              «Мечта — стать экспертом в Big4 или сильном финтех-проекте».
+              "The dream — to become an expert at a Big 4 firm or a strong fintech project."
             </blockquote>
-            <p className="mt-8 text-xs uppercase tracking-[0.3em] text-ochre">— заметка на полях</p>
+            <p className="mt-8 text-xs uppercase tracking-[0.3em] text-ochre">— margin note</p>
           </Reveal>
         </div>
       </section>

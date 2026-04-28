@@ -5,24 +5,24 @@ import { ArrowRight, Play, Pause, ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import portrait from "@/assets/hero-portrait.jpg";
-import heroVideo from "@/assets/hero-video.mp4.asset.json";
+import heroVideo from "@/assets/hero-video-new.mp4";
 import { useParallax } from "@/hooks/use-reveal";
 
 const principles = [
   {
     n: "I.",
-    title: "Цифры — это язык решений",
-    quote: "За каждым успешным решением стоят данные, а не интуиция.",
+    title: "Numbers are the language of decisions",
+    quote: "Behind every successful decision there is data, not intuition.",
   },
   {
     n: "II.",
-    title: "Структура побеждает хаос",
-    quote: "Сначала таблица, потом вывод. Сначала модель, потом мнение.",
+    title: "Structure beats chaos",
+    quote: "Table first, conclusion second. Model first, opinion second.",
   },
   {
     n: "III.",
-    title: "Аналитика — это мышление",
-    quote: "Excel и SQL — лишь инструменты. Главный инструмент — голова.",
+    title: "Analytics is a way of thinking",
+    quote: "Excel and SQL are just tools. The main tool is the mind.",
   },
 ];
 
@@ -88,7 +88,7 @@ const Index = () => {
           <span className="font-serif italic text-sm text-muted-foreground">No. 01</span>
           <div className="h-px flex-1 bg-ink/15" />
           <span className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-            Экономика &amp; Аналитика
+            Economics &amp; Analytics
           </span>
         </div>
 
@@ -96,12 +96,12 @@ const Index = () => {
           <div className="lg:col-span-7 animate-slide-up">
             <p className="text-xs uppercase tracking-[0.3em] text-terracotta mb-6 inline-flex items-center gap-3">
               <span className="relative w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse-ring" />
-              Нархоз · 1 курс · Будущий финансовый аналитик
+              Narxoz · Year 1 · Future Financial Analyst
             </p>
             <h1 className="font-serif font-light text-6xl md:text-8xl lg:text-[9.5rem] leading-[0.92] text-ink text-balance">
-              Камила <em className="font-medium text-terracotta">Досбаева</em>
+              Kamila <em className="font-medium text-terracotta">Dosbayeva</em>
               <span className="block text-2xl md:text-4xl mt-4 text-muted-foreground italic font-light">
-                Студентка 1 курса Университета Нархоз — будущий финансовый аналитик.
+                Year 1 student at Narxoz University — future financial analyst.
               </span>
             </h1>
 
@@ -109,14 +109,14 @@ const Index = () => {
               <Button asChild size="lg"
                 className="group rounded-none bg-terracotta text-paper hover:bg-ink px-8 py-7 text-sm tracking-wider uppercase">
                 <Link to="/goals">
-                  Посмотреть мой Roadmap
+                  View my Roadmap
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline"
                 className="group rounded-none border-ink text-ink hover:bg-ink hover:text-paper px-8 py-7 text-sm tracking-wider uppercase">
                 <Link to="/interests">
-                  Обо мне <ArrowDown className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
+                  About me <ArrowDown className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
                 </Link>
               </Button>
             </div>
@@ -138,13 +138,13 @@ const Index = () => {
               >
                 <img
                   src={portrait}
-                  alt="Портрет Камилы Досбаевой — студентки Нархоза"
+                  alt="Portrait of Kamila Dosbayeva — Narxoz University student"
                   className="w-full aspect-[4/5] object-cover"
                   width={1080} height={1350}
                 />
               </div>
               <div className="absolute -bottom-4 -left-4 bg-terracotta text-paper px-5 py-3 font-serif italic text-sm shadow-warm max-w-[18rem] animate-float">
-                «За каждым решением — цифры».
+                "Behind every decision — numbers."
               </div>
               <div className="absolute -top-3 -right-3 bg-paper border border-ink/15 px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-ink/85 shadow-soft hidden md:block">
                 Almaty · 43°N
@@ -169,21 +169,21 @@ const Index = () => {
         </div>
       </div>
 
-      {/* МОЙ ПОДХОД — BIO */}
+      {/* MY APPROACH — BIO */}
       <section className="bg-paper-warm border-b border-ink/10">
         <div className="container py-20 md:py-28 grid md:grid-cols-12 gap-10">
           <Reveal className="md:col-span-3">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-2">02 — Мой подход</p>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-2">02 — My approach</p>
             <h2 className="font-serif text-3xl md:text-4xl font-light leading-tight">
-              Коротко<br/><em className="text-terracotta">обо мне</em>.
+              A few words<br/><em className="text-terracotta">about me</em>.
             </h2>
           </Reveal>
           <Reveal className="md:col-span-6 md:col-start-5" delay={1}>
             <p className="drop-cap font-serif text-xl md:text-2xl leading-[1.55] text-ink/85">
-              Верю, что за каждым успешным решением стоят цифры. В Нархозе я учусь понимать экономику, а в жизни — структурировать данные и находить в них смысл.
+              I believe every successful decision is backed by numbers. At Narxoz I'm learning to understand economics — and in everyday life I'm learning to structure data and find meaning in it.
             </p>
             <p className="mt-6 text-base leading-relaxed text-ink/85 text-pretty">
-              Между парами осваиваю Excel и SQL, изучаю основы инвестиций и слежу за тем, как корпоративная аналитика меняет финансовый сектор. Моя цель — превратить интерес к данным в профессию, где каждое решение опирается на ясные модели и факты.
+              Between classes I'm mastering Excel and SQL, studying the fundamentals of investing, and tracking how corporate analytics is reshaping the financial sector. My goal is to turn a passion for data into a career where every decision rests on clear models and facts.
             </p>
           </Reveal>
         </div>
@@ -193,14 +193,14 @@ const Index = () => {
       <section className="container py-24 md:py-32">
         <div className="flex items-baseline justify-between mb-16 gap-8 flex-wrap">
           <Reveal>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-2">03 — Принципы</p>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-2">03 — Principles</p>
             <h2 className="font-serif text-4xl md:text-6xl font-light leading-[1] text-balance max-w-2xl">
-              Три правила, по которым я <em className="text-terracotta">работаю</em>.
+              Three rules I <em className="text-terracotta">work by</em>.
             </h2>
           </Reveal>
           <Reveal delay={1}>
             <p className="font-serif italic text-muted-foreground max-w-xs">
-              Короткий манифест аналитика — записан на полях ежедневника.
+              A short analyst's manifesto — jotted in the margins of a planner.
             </p>
           </Reveal>
         </div>
@@ -235,14 +235,14 @@ const Index = () => {
         <div className="container py-24 md:py-32 relative">
           <div className="grid md:grid-cols-12 gap-10 mb-12 items-end">
             <Reveal className="md:col-span-7">
-              <p className="text-[10px] uppercase tracking-[0.25em] text-ochre mb-3">10 секунд · AI-видео (Veo)</p>
+              <p className="text-[10px] uppercase tracking-[0.25em] text-ochre mb-3">10 sec · AI video (Veo)</p>
               <h2 className="font-serif text-4xl md:text-6xl font-light leading-[1.05] text-balance">
-                Цифры, графики и <em className="text-ochre">офис мечты</em>.
+                Numbers, charts and the <em className="text-ochre">dream office</em>.
               </h2>
             </Reveal>
             <Reveal className="md:col-span-4 md:col-start-9" delay={1}>
               <p className="font-serif italic text-paper/70">
-                Современный финансовый офис, переплетённый с цифровыми интерфейсами — визуализация того, к чему я иду.
+                A modern financial office intertwined with digital interfaces — a visualisation of where I'm headed.
               </p>
             </Reveal>
           </div>
@@ -251,7 +251,7 @@ const Index = () => {
             <div className="relative group cursor-pointer overflow-hidden shadow-2xl card-lift" onClick={togglePlay}>
               <video
                 ref={videoRef}
-                src={heroVideo.url}
+                src={heroVideo}
                 className="w-full aspect-video object-cover transition-transform duration-[1500ms] group-hover:scale-[1.03]"
                 loop muted playsInline
                 onPlay={() => setPlaying(true)}
@@ -263,7 +263,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.25em] text-paper/80 bg-ink/60 backdrop-blur px-3 py-1.5">
-                Сгенерировано AI · 0:10
+                AI-generated · 0:10
               </div>
             </div>
           </Reveal>
@@ -273,21 +273,21 @@ const Index = () => {
       {/* CTA */}
       <section className="container py-24 md:py-32 text-center">
         <Reveal>
-          <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-4">Дальше</p>
+          <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-4">Up next</p>
           <h2 className="font-serif text-4xl md:text-6xl font-light leading-tight mb-10 text-balance">
-            В следующих главах — <em className="text-terracotta">больше</em>.
+            More in the <em className="text-terracotta">next chapters</em>.
           </h2>
         </Reveal>
         <Reveal delay={1}>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button asChild size="lg" className="group rounded-none bg-ink text-paper hover:bg-terracotta px-8 py-7 text-sm tracking-wider uppercase">
               <Link to="/interests">
-                Энергия и фокус <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                Energy &amp; Focus <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="group rounded-none border-ink text-ink hover:bg-ink hover:text-paper px-8 py-7 text-sm tracking-wider uppercase">
               <Link to="/goals">
-                Профессиональный вектор <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                Professional Vector <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>

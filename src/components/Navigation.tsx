@@ -4,8 +4,8 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { to: "/", label: "Главная", num: "01" },
-  { to: "/interests", label: "Обо мне", num: "02" },
+  { to: "/", label: "Home", num: "01" },
+  { to: "/interests", label: "About", num: "02" },
   { to: "/goals", label: "Roadmap", num: "03" },
 ];
 
@@ -46,7 +46,7 @@ export const Navigation = () => {
         </nav>
 
         <button
-          aria-label="Меню"
+          aria-label="Menu"
           onClick={() => setOpen(!open)}
           className="md:hidden p-2 text-ink"
         >

@@ -19,11 +19,11 @@ export const Footer = () => {
     const name = String(fd.get("name") || "");
     const from = String(fd.get("email") || "");
     const msg = String(fd.get("message") || "");
-    const subject = encodeURIComponent(`Письмо с сайта — ${name || "без имени"}`);
+    const subject = encodeURIComponent(`Message from website — ${name || "anonymous"}`);
     const body = encodeURIComponent(`${msg}\n\n— ${name}\n${from}`);
     window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
     setTimeout(() => {
-      toast.success("Открыл почтовый клиент — отправь письмо.");
+      toast.success("Mail client opened — go ahead and send.");
       (e.target as HTMLFormElement).reset();
       setLoading(false);
     }, 600);
@@ -35,20 +35,20 @@ export const Footer = () => {
         {/* Contact form */}
         <div>
           <p className="text-[10px] uppercase tracking-[0.25em] text-paper/60 mb-4">
-            04 — Связаться со мной
+            04 — Get in touch
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-light leading-[1.05] mb-8 text-balance">
-            Напиши — <em className="text-ochre">обсудим</em> идею.
+            Write — let's <em className="text-ochre">discuss</em> your idea.
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <Label htmlFor="name" className="text-xs uppercase tracking-wider text-paper/75">Имя</Label>
+                <Label htmlFor="name" className="text-xs uppercase tracking-wider text-paper/75">Name</Label>
                 <Input
                   id="name" name="name" required
                   className="mt-2 bg-transparent border-0 border-b border-paper/40 rounded-none px-0 text-paper placeholder:text-paper/40 focus-visible:ring-0 focus-visible:border-ochre"
-                  placeholder="Как тебя зовут"
+                  placeholder="What's your name"
                 />
               </div>
               <div>
@@ -56,22 +56,22 @@ export const Footer = () => {
                 <Input
                   id="email" name="email" type="email" required
                   className="mt-2 bg-transparent border-0 border-b border-paper/40 rounded-none px-0 text-paper placeholder:text-paper/40 focus-visible:ring-0 focus-visible:border-ochre"
-                  placeholder="ты@example.com"
+                  placeholder="you@example.com"
                 />
               </div>
             </div>
             <div>
-              <Label htmlFor="message" className="text-xs uppercase tracking-wider text-paper/75">Сообщение</Label>
+              <Label htmlFor="message" className="text-xs uppercase tracking-wider text-paper/75">Message</Label>
               <Textarea
                 id="message" name="message" required rows={4}
                 className="mt-2 bg-transparent border-0 border-b border-paper/40 rounded-none px-0 text-paper placeholder:text-paper/40 focus-visible:ring-0 focus-visible:border-ochre resize-none"
-                placeholder="Расскажи коротко, о чём…"
+                placeholder="Tell me briefly what it's about…"
               />
             </div>
             <Button type="submit" disabled={loading} variant="ghost"
               className="group bg-ochre text-ink hover:bg-paper hover:text-ink rounded-none px-8 py-6 font-sans text-sm tracking-wider uppercase">
               <Send className="mr-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              {loading ? "Открываю почту…" : "Отправить"}
+              {loading ? "Opening mail…" : "Send"}
             </Button>
           </form>
         </div>
@@ -79,7 +79,7 @@ export const Footer = () => {
         {/* Sidebar info */}
         <div className="md:pl-12 md:border-l border-paper/15 space-y-10">
           <div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-paper/60 mb-4">Напрямую</p>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-paper/60 mb-4">Direct</p>
             <a
               href={`mailto:${EMAIL}`}
               className="font-serif text-xl md:text-2xl text-paper hover:text-ochre transition-colors inline-flex items-center gap-2 break-all"
@@ -89,7 +89,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-paper/60 mb-4">Соцсети</p>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-paper/60 mb-4">Social</p>
             <ul className="space-y-3 font-serif text-lg">
               <li>
                 <a
@@ -119,10 +119,10 @@ export const Footer = () => {
           </div>
 
           <div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-paper/60 mb-4">Навигация</p>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-paper/60 mb-4">Navigation</p>
             <div className="flex gap-6 font-sans text-sm text-paper/85">
-              <Link to="/" className="hover:text-ochre transition-colors">Главная</Link>
-              <Link to="/interests" className="hover:text-ochre transition-colors">Обо мне</Link>
+              <Link to="/" className="hover:text-ochre transition-colors">Home</Link>
+              <Link to="/interests" className="hover:text-ochre transition-colors">About</Link>
               <Link to="/goals" className="hover:text-ochre transition-colors">Roadmap</Link>
             </div>
           </div>
@@ -131,7 +131,7 @@ export const Footer = () => {
 
       <div className="border-t border-paper/10">
         <div className="container py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-paper/65">
-          <span className="font-serif italic">© MMXXVI — Камила Досбаева. Сделано с заботой.</span>
+          <span className="font-serif italic">© MMXXVI — Kamila Dosbayeva. Made with care.</span>
           <span className="uppercase tracking-[0.2em]">Edition Nº 01</span>
         </div>
       </div>
